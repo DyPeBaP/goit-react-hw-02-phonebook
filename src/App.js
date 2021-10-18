@@ -4,6 +4,7 @@ import ContactList from "./components/ContactList/ContactList";
 import Filter from "./components/Filter/Filter";
 import filter from "./helpers/filter";
 import shortid from "shortid";
+import s from "./App.module.css";
 
 class App extends Component {
   state = {
@@ -37,7 +38,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className={s.app}>
         <ContactForm handleAddContact={this.handleAddContact} />
         <Filter
           filter={this.state.filter}
